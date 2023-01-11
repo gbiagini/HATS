@@ -35,7 +35,7 @@ foreach my $tmp ( @file ) {
 	print $file . "\n";
 }	
 # capture database version
-my $database = "3.39.0";
+my $database = "3.50.0";
 if ( $file =~ /hla_prot\.fasta\.(.*+)/ ) {
 	$database = $1;
 }
@@ -156,3 +156,4 @@ if ( $csvs > 0 ) {
 }
 
 copy("output/" . $gene . "_Serotype_Table_IMGT_HLA_" . $database . "_" . $date . ".csv", "RESULTS/") or die "Copy failed: $!";
+copy("output/" . $gene . "_TwoField_Serotype_Table_IMGT_HLA_" . $database . "_" . $date . ".csv", "TWORESULTS/") or die "Copy failed: $!";

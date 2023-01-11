@@ -11,7 +11,7 @@
 # last modified and documented on August 9 2020
 
 use strict;
-use lib '/data/kazu/workplace/serotype/SEROTYPE';
+use lib 'SEROTYPE';
 use ORGANIZE;
 use STRASSIGN;
 use RESIDUES;
@@ -34,7 +34,7 @@ foreach my $tmp ( @file ) {
 	print $file . "\n";
 }	
 # capture database version
-my $database = "3.39.0";
+my $database = "3.50.0";
 if ( $file =~ /hla_prot\.fasta\.(.*+)/ ) {
 	$database = $1;
 }
