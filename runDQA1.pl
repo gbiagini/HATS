@@ -34,7 +34,7 @@ foreach my $tmp ( @file ) {
 	print $file . "\n";
 }	
 # capture database version
-my $database = "3.50.0";
+my $database = "3.52.0";
 if ( $file =~ /hla_prot\.fasta\.(.*+)/ ) {
 	$database = $1;
 }
@@ -129,6 +129,7 @@ ASSIGNED_SHORT::PRINT( $unassigned_ref, $short_ref );
 
 # generate final table
 my $broad_ref = DQA1_INFO::BROAD();
+#ASSIGNED_SHORT::AC_COMBINED(  $database,$null_ref,$qallele_ref,$assigned_ref,$unassigned_ref,$short_ref,$gene,$base_ref,$basetype_ref,$cross_ref,$broad_ref,$ciwd_ref,$cwd_ref );
 ASSIGNED_SHORT::COMBINED( $database, $null_ref,$qallele_ref,$assigned_ref,$unassigned_ref,$short_ref,$gene,$base_ref,$basetype_ref,$cross_ref,
 $broad_ref,$ciwd_ref,$cwd_ref,$ecwd_ref );
 ASSIGNED_SHORT::COMBINED_TWO( $database, $null_ref,$qallele_ref,$assigned_ref,$unassigned_ref,$short_ref,$gene,$base_ref,$basetype_ref,$cross_ref,
@@ -136,7 +137,8 @@ $broad_ref,$ciwd_ref,$cwd_ref,$ecwd_ref );
 
 @csv = glob("output/" . $gene . "_Serotype_Table_IMGT_HLA_*");
 foreach my $csv ( @csv ) {
-	COUNT::SUMMARY($csv, $gene, $sero_ref, $null_ref, $qallele_ref, $basetype_ref);
+	#COUNT::SUMMARY($csv, $gene, $sero_ref, $null_ref, $qallele_ref, $basetype_ref);
+	COUNT::SUMMARY($csv, $gene, $null_ref, $qallele_ref);
 	COUNT::SUMMARY_TWO($csv, $gene, $sero_ref, $null_ref, $qallele_ref, $basetype_ref);
 }
 

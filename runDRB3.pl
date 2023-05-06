@@ -34,7 +34,7 @@ foreach my $tmp ( @file ) {
 	print $file . "\n";
 }	
 # capture database version
-my $database = "3.50.0";
+my $database = "3.52.0";
 if ( $file =~ /hla_prot\.fasta\.(.*+)/ ) {
 	$database = $1;
 }

@@ -34,7 +34,7 @@ foreach my $tmp ( @file ) {
 	print $file . "\n";
 }	
 # capture database version
-my $database = "3.50.0";
+my $database = "3.52.0";
 if ( $file =~ /hla_prot\.fasta\.(.*+)/ ) {
 	$database = $1;
 }
@@ -137,7 +137,8 @@ $broad_ref,$ciwd_ref,$cwd_ref,$ecwd_ref );
 
 @csv = glob("output/" . $gene . "_Serotype_Table_IMGT_HLA_*");
 foreach my $csv ( @csv ) {
-	COUNT::SUMMARY($csv, $gene, $sero_ref, $null_ref, $qallele_ref, $basetype_ref);
+	#COUNT::SUMMARY($csv, $gene, $sero_ref, $null_ref, $qallele_ref, $basetype_ref);
+	COUNT::SUMMARY($csv, $gene, $null_ref, $qallele_ref);
 	COUNT::SUMMARY_TWO($csv, $gene, $sero_ref, $null_ref, $qallele_ref, $basetype_ref);
 }
 

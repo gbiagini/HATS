@@ -18,7 +18,7 @@ mkdir output
 # input/hla_prot.fasta.3.44.0
 # An empty file is created to show database version when one of the following commands are executed
 
-hla_prot.fasta.3.44.0
+hla_prot.fasta.3.52.0
 
 # Generate HLA-A allele to serotype table
 ./runHlaA.pl

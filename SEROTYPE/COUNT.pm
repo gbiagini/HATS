@@ -13,9 +13,10 @@
 #eliminated smartmatch
 package COUNT;
 use strict;
-use lib '/home/kazutoyo/KazuLib';		# for hidpl server
+#use lib '/home/kazutoyo/KazuLib';		# for hidpl server
 use Openfile;
-use lib '/data/kazu/workplace/serotype/SEROTYPE';
+#use lib '/data/kazu/workplace/serotype/SEROTYPE';
+use lib 'SEROTYPE';
 use GROUP_SORT;
 use ASSIGNED_SHORT;
 

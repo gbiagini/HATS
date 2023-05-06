@@ -871,7 +871,7 @@ sub PARTIAL {		# partial sequence
 
 	$partial{ "B-3803" } = $seq;	# still partial
 	$partial{ "B-4047" } = $seq;	# still partial
-	$partial{ "B-4021" } = $seq;	# still partial
+    # $partial{ "B-4021" } = $seq;	# still partial
 
 		
 	return $partial_ref;

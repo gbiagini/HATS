@@ -34,7 +34,7 @@ foreach my $tmp ( @file ) {
 	print $file . "\n";
 }	
 # capture database version
-my $database = "3.50.0";
+my $database = "3.52.0";
 if ( $file =~ /hla_prot\.fasta\.(.*+)/ ) {
 	$database = $1;
 }
@@ -57,7 +57,6 @@ open ( FILE, ">output/" . $database . ".csv" );	#create an empty file to tage da
 close FILE;
 
 my $fasta_ref = ORGANIZE::fasta( $file );	# organize fasta
-
 my $gene = DQB1_INFO::DQB1();
 my $ciwd_ref = ORGANIZE::CIWD( $gene );
 my $cwd_ref = ORGANIZE::CWD( $gene );
